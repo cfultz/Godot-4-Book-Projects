@@ -1,14 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://dov58nlrlslto"]
+[gd_scene load_steps=12 format=3 uid="uid://dov58nlrlslto"]
 
 [ext_resource type="PackedScene" uid="uid://vo0v8pu046av" path="res://scenes/player/player.tscn" id="1_45rda"]
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_aglls"]
 [ext_resource type="PackedScene" uid="uid://bgcdlmhrwlu0s" path="res://scenes/coin/coin.tscn" id="2_gx6sf"]
 [ext_resource type="Texture2D" uid="uid://net2qcgecyjg" path="res://assets/grass.png" id="3_wof7w"]
+[ext_resource type="PackedScene" uid="uid://bwn544w1la6ay" path="res://scenes/obstacles/cactus.tscn" id="4_j7rim"]
+[ext_resource type="PackedScene" uid="uid://k0oha3doe4hf" path="res://scenes/powerups/powerup.tscn" id="5_ggpk1"]
 [ext_resource type="PackedScene" uid="uid://buh08lnnvr3o0" path="res://scenes/UI/hud.tscn" id="5_llr2d"]
+[ext_resource type="AudioStream" uid="uid://crps3qrriro5y" path="res://assets/audio/Coin.wav" id="6_xix7y"]
+[ext_resource type="AudioStream" uid="uid://dnuak388vxldy" path="res://assets/audio/Level.wav" id="7_kd5jn"]
+[ext_resource type="AudioStream" uid="uid://cr2tkixovmsnc" path="res://assets/audio/EndSound.wav" id="8_7rdrk"]
+[ext_resource type="AudioStream" uid="uid://dbkbuv83spy53" path="res://assets/audio/Powerup.wav" id="10_v1vwn"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_aglls")
 coin_scene = ExtResource("2_gx6sf")
+powerup_scene = ExtResource("5_ggpk1")
+cactus = ExtResource("4_j7rim")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_right = 480.0
@@ -24,7 +32,23 @@ stretch_mode = 1
 
 [node name="GameTimer" type="Timer" parent="."]
 
+[node name="PowerupTimer" type="Timer" parent="."]
+
+[node name="CoinSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_xix7y")
+
+[node name="LevelSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_kd5jn")
+
+[node name="EndSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_7rdrk")
+
+[node name="PowerupSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_v1vwn")
+volume_db = 5.0
+
 [connection signal="hurt" from="Player" to="." method="_on_player_hurt"]
 [connection signal="pickup" from="Player" to="." method="_on_player_pickup"]
 [connection signal="start_game" from="HUD" to="." method="_on_hud_start_game"]
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
+[connection signal="timeout" from="PowerupTimer" to="." method="_on_powerup_timer_timeout"]

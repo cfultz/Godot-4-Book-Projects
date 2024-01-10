@@ -9,6 +9,9 @@ func pickup():
 	tw.tween_property(self, "modulate:a", 0.0, 0.3)
 	await tw.finished
 	queue_free()
+	
+func _on_lifetime_timeout():
+	queue_free()
 
 func _on_area_entered(area):
 	if area.is_in_group("obstacles"):
