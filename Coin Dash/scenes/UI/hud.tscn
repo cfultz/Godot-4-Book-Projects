@@ -1,13 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://buh08lnnvr3o0"]
+[gd_scene load_steps=9 format=3 uid="uid://buh08lnnvr3o0"]
 
 [ext_resource type="FontFile" uid="uid://knq8xmhnvby2" path="res://assets/Kenney Mini.ttf" id="1_dfh42"]
 [ext_resource type="Script" path="res://scenes/UI/hud.gd" id="1_evdhl"]
-[ext_resource type="Texture2D" uid="uid://net2qcgecyjg" path="res://assets/grass.png" id="3_45lew"]
+[ext_resource type="Texture2D" uid="uid://dryu51sy0tnd7" path="res://assets/UI/green_button04.png" id="3_khre3"]
+[ext_resource type="Texture2D" uid="uid://b5qxfqj80dv2t" path="res://assets/UI/green_button05.png" id="4_w2xhj"]
+
+[sub_resource type="Theme" id="Theme_r7yy8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ksphk"]
-texture = ExtResource("3_45lew")
+texture = ExtResource("3_khre3")
 texture_margin_left = 10.0
 modulate_color = Color(0.352941, 0.72549, 0.184314, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8qwbb"]
+texture = ExtResource("3_khre3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_plk0i"]
+texture = ExtResource("4_w2xhj")
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_evdhl")
@@ -23,9 +32,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 8
-theme_override_constants/shadow_offset_y = 6
-theme_override_constants/shadow_outline_size = 8
+theme_override_constants/shadow_offset_x = 6
 theme_override_fonts/font = ExtResource("1_dfh42")
 theme_override_font_sizes/font_size = 72
 text = "Coin Dash!"
@@ -44,9 +51,12 @@ offset_right = 35.0
 offset_bottom = -140.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = SubResource("Theme_r7yy8")
 theme_override_fonts/font = ExtResource("1_dfh42")
 theme_override_font_sizes/font_size = 72
 theme_override_styles/normal = SubResource("StyleBoxTexture_ksphk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8qwbb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_plk0i")
 text = "Start"
 
 [node name="Container" type="MarginContainer" parent="."]

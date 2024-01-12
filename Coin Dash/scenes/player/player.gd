@@ -52,6 +52,10 @@ func _on_area_entered(area):
 		area.pickup()
 		pickup.emit("powerup")
 		
+	if area.is_in_group("cacti_remover"):
+		area.pickup()
+		pickup.emit("remover")
+		
 	if area.is_in_group("obstacles"):
 		hurt.emit()
 		die()

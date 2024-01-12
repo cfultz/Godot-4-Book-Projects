@@ -1,52 +1,72 @@
-[gd_scene load_steps=14 format=3 uid="uid://k0oha3doe4hf"]
+[gd_scene load_steps=19 format=3 uid="uid://k0oha3doe4hf"]
 
 [ext_resource type="Script" path="res://scenes/powerups/powerup.gd" id="1_ay2sx"]
-[ext_resource type="Texture2D" uid="uid://c2tt46uunmxv4" path="res://assets/pow/pow-frame-1.png" id="1_h8hpb"]
-[ext_resource type="Texture2D" uid="uid://t8rrxmbcoava" path="res://assets/pow/pow-frame-2.png" id="2_x26p3"]
-[ext_resource type="Texture2D" uid="uid://08u7ky3uewao" path="res://assets/pow/pow-frame-3.png" id="3_p8js8"]
-[ext_resource type="Texture2D" uid="uid://bmim50grtyvpv" path="res://assets/pow/pow-frame-4.png" id="4_00qaq"]
-[ext_resource type="Texture2D" uid="uid://jr5otxogdeut" path="res://assets/pow/pow-frame-5.png" id="5_cojqn"]
-[ext_resource type="Texture2D" uid="uid://c6btyj8bo1ecd" path="res://assets/pow/pow-frame-6.png" id="6_xl7pf"]
-[ext_resource type="Texture2D" uid="uid://bscingycgpor6" path="res://assets/pow/pow-frame-7.png" id="7_55wrp"]
-[ext_resource type="Texture2D" uid="uid://0ub7hm4i5sjn" path="res://assets/pow/pow-frame-8.png" id="8_qjwmb"]
-[ext_resource type="Texture2D" uid="uid://cmijnawh6sup0" path="res://assets/pow/pow-frame-9.png" id="9_4c7k5"]
-[ext_resource type="Texture2D" uid="uid://butkdqqayyfo8" path="res://assets/pow/pow-frame-10.png" id="10_w21pl"]
+[ext_resource type="Texture2D" uid="uid://ddw1c6i8euedu" path="res://assets/hourglass/hourglass1.png" id="2_eh7i3"]
+[ext_resource type="Texture2D" uid="uid://bjhqguayi1udv" path="res://assets/hourglass/hourglass2.png" id="3_o5hxn"]
+[ext_resource type="Texture2D" uid="uid://cshco0ssopsb7" path="res://assets/hourglass/hourglass3.png" id="4_co206"]
+[ext_resource type="Texture2D" uid="uid://oi6qskpojk7o" path="res://assets/hourglass/hourglass4.png" id="5_nfa0f"]
+[ext_resource type="Texture2D" uid="uid://cvbf1fbrfbnw7" path="res://assets/hourglass/hourglass5.png" id="6_mi7ac"]
+[ext_resource type="Texture2D" uid="uid://dew5jep1y7ea0" path="res://assets/hourglass/hourglass6.png" id="7_xtmt6"]
+[ext_resource type="Texture2D" uid="uid://c3n8lcvpr53g6" path="res://assets/hourglass/hourglass7.png" id="8_fcljq"]
+[ext_resource type="Texture2D" uid="uid://2v30cxk8fcsv" path="res://assets/hourglass/hourglass8.png" id="9_abq4j"]
+[ext_resource type="Texture2D" uid="uid://bpek05f2iar2f" path="res://assets/hourglass/hourglass9.png" id="10_adiam"]
+[ext_resource type="Texture2D" uid="uid://1akpey5fp5q7" path="res://assets/hourglass/hourglass10.png" id="11_dpr7u"]
+[ext_resource type="Texture2D" uid="uid://bm6mls7ktwrg4" path="res://assets/hourglass/hourglass11.png" id="12_swkhg"]
+[ext_resource type="Texture2D" uid="uid://bwldwi5gpdstl" path="res://assets/hourglass/hourglass12.png" id="13_qkro3"]
+[ext_resource type="Texture2D" uid="uid://dn8h06d0gbljv" path="res://assets/hourglass/hourglass13.png" id="14_84hh6"]
+[ext_resource type="Texture2D" uid="uid://bds4hewggnt3j" path="res://assets/hourglass/hourglass14.png" id="15_dtwhk"]
+[ext_resource type="Texture2D" uid="uid://cq70me62v8sbf" path="res://assets/hourglass/hourglass15.png" id="16_srxxp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gxej4"]
 radius = 20.025
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_8fxuv"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_182ji"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_h8hpb")
+"texture": ExtResource("2_eh7i3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_x26p3")
+"texture": ExtResource("3_o5hxn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_p8js8")
+"texture": ExtResource("4_co206")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_00qaq")
+"texture": ExtResource("5_nfa0f")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_cojqn")
+"texture": ExtResource("6_mi7ac")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_xl7pf")
+"texture": ExtResource("7_xtmt6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_55wrp")
+"texture": ExtResource("8_fcljq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_qjwmb")
+"texture": ExtResource("9_abq4j")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_4c7k5")
+"texture": ExtResource("10_adiam")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_w21pl")
+"texture": ExtResource("11_dpr7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_swkhg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qkro3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_84hh6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_dtwhk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_srxxp")
 }],
 "loop": true,
 "name": &"default",
@@ -60,10 +80,9 @@ script = ExtResource("1_ay2sx")
 shape = SubResource("CircleShape2D_gxej4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.4, 0.4)
-sprite_frames = SubResource("SpriteFrames_8fxuv")
+sprite_frames = SubResource("SpriteFrames_182ji")
 autoplay = "default"
-frame_progress = 0.523207
+frame_progress = 0.354226
 
 [node name="Lifetime" type="Timer" parent="."]
 wait_time = 2.5

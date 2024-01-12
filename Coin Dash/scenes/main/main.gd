@@ -2,8 +2,10 @@ extends Node
 
 @export var coin_scene : PackedScene
 @export var powerup_scene : PackedScene
+@export var cacti_remover : PackedScene
 @export var cactus : PackedScene
 @export var playtime = 30
+
 
 var level = 1
 var score = 0
@@ -31,17 +33,22 @@ func new_game():
 	$Player.show()
 	$GameTimer.start()
 	spawn_coins()
-	spawn_cacti()
+#	Testing Features
+
+	remover_timer()
+
 
 func spawn_coins():
 	$LevelSound.play()
 	_on_powerup_timer_timeout()
-	spawn_cacti()
+	if level > 1:
+		spawn_cacti()
 	for i in level + 4:
 		var c = coin_scene.instantiate()
 		add_child(c)
 		c.screensize = screensize
 		c.position = Vector2(randi_range(0, screensize.x), randi_range(0, screensize.y))
+		
 
 func _on_game_timer_timeout():
 	time_left -= 1
@@ -62,14 +69,21 @@ func _on_player_pickup(type):
 			time_left += 5
 			$PowerupSound.play()
 			$HUD.update_timer(time_left)
+		"remover":
+			get_tree().call_group("obstacles", "queue_free")
+			$PowerupSound.play()
+			
 
 func game_over():
 	playing = false
+	$Remover.stop()
+	$PowerupTimer.stop()
 	$GameTimer.stop()
 	$EndSound.play()
 	get_tree().call_group("coins", "queue_free")
 	get_tree().call_group("obstacles", "queue_free")
 	get_tree().call_group("powerups", "queue_free")
+	get_tree().call_group("cacti_remover", "queue_free")
 	$HUD.show_game_over()
 	$Player.die()
 
@@ -89,3 +103,13 @@ func spawn_cacti():
 	add_child(cacti)
 	cacti.screensize = screensize
 	cacti.position = Vector2(randi_range(100, screensize.x), randi_range(100, screensize.y))
+	
+func spawn_remover():
+	var remover = cacti_remover.instantiate()
+	add_child(remover)
+	remover.screensize = screensize
+	remover.position = Vector2(randi_range(100, screensize.x), randi_range(100, screensize.y))
+
+func remover_timer():
+	if level > 1:
+		spawn_remover()

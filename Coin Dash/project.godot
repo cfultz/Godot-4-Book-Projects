@@ -13,7 +13,7 @@ config_version=5
 config/name="Coin Dash"
 run/main_scene="res://scenes/main/main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://assets/crocboy/idle/frame-1.png"
 
 [audio]
 

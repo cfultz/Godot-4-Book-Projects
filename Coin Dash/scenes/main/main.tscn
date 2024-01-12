@@ -1,12 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://dov58nlrlslto"]
+[gd_scene load_steps=13 format=3 uid="uid://dov58nlrlslto"]
 
 [ext_resource type="PackedScene" uid="uid://vo0v8pu046av" path="res://scenes/player/player.tscn" id="1_45rda"]
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_aglls"]
 [ext_resource type="PackedScene" uid="uid://bgcdlmhrwlu0s" path="res://scenes/coin/coin.tscn" id="2_gx6sf"]
-[ext_resource type="Texture2D" uid="uid://net2qcgecyjg" path="res://assets/grass.png" id="3_wof7w"]
 [ext_resource type="PackedScene" uid="uid://bwn544w1la6ay" path="res://scenes/obstacles/cactus.tscn" id="4_j7rim"]
+[ext_resource type="PackedScene" uid="uid://duca04ilhc7rj" path="res://scenes/powerups/cacti_remover.tscn" id="4_qeist"]
 [ext_resource type="PackedScene" uid="uid://k0oha3doe4hf" path="res://scenes/powerups/powerup.tscn" id="5_ggpk1"]
 [ext_resource type="PackedScene" uid="uid://buh08lnnvr3o0" path="res://scenes/UI/hud.tscn" id="5_llr2d"]
+[ext_resource type="Texture2D" uid="uid://c5jbq3fsmnk4t" path="res://assets/floor.png" id="6_ma3b2"]
 [ext_resource type="AudioStream" uid="uid://crps3qrriro5y" path="res://assets/audio/Coin.wav" id="6_xix7y"]
 [ext_resource type="AudioStream" uid="uid://dnuak388vxldy" path="res://assets/audio/Level.wav" id="7_kd5jn"]
 [ext_resource type="AudioStream" uid="uid://cr2tkixovmsnc" path="res://assets/audio/EndSound.wav" id="8_7rdrk"]
@@ -16,6 +17,7 @@
 script = ExtResource("1_aglls")
 coin_scene = ExtResource("2_gx6sf")
 powerup_scene = ExtResource("5_ggpk1")
+cacti_remover = ExtResource("4_qeist")
 cactus = ExtResource("4_j7rim")
 
 [node name="Background" type="TextureRect" parent="."]
@@ -23,7 +25,7 @@ offset_right = 480.0
 offset_bottom = 720.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("3_wof7w")
+texture = ExtResource("6_ma3b2")
 stretch_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("1_45rda")]
@@ -33,6 +35,13 @@ stretch_mode = 1
 [node name="GameTimer" type="Timer" parent="."]
 
 [node name="PowerupTimer" type="Timer" parent="."]
+
+[node name="Remover" type="Timer" parent="."]
+wait_time = 15.0
+autostart = true
+
+[node name="EnemyTimer" type="Timer" parent="."]
+autostart = true
 
 [node name="CoinSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_xix7y")
@@ -52,3 +61,5 @@ volume_db = 5.0
 [connection signal="start_game" from="HUD" to="." method="_on_hud_start_game"]
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
 [connection signal="timeout" from="PowerupTimer" to="." method="_on_powerup_timer_timeout"]
+[connection signal="timeout" from="Remover" to="." method="remover_timer"]
+[connection signal="timeout" from="EnemyTimer" to="." method="enemy_timer"]
