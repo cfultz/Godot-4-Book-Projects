@@ -2,3 +2,4 @@
 .godot/
 # Additional ignores
 android/
+export_presets.cfg

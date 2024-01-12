@@ -8,6 +8,8 @@ Collect all the coins to advance to the next round in the allotted time but watc
 
 ## Assets Used
 
+Thanks to many artists on OpenGameArt.org!
+
 - [Hourglass](https://opengameart.org/content/animated-hourglass) by Zoedoz released under CC0 
 - [Crocodile Mascot](https://opengameart.org/content/bevouliin-free-game-sprites-crocodile-mascot-running-and-jumping-boy-game-character) by bevoulin released CC0
 - [Ice Patch Effect](https://opengameart.org/content/ice-patch-effect) used as puddles by dorkster released under CC-BY-SA 3.0
