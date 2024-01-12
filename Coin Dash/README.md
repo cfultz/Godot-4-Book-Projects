@@ -25,3 +25,7 @@ Thanks to many artists on OpenGameArt.org!
 ### Fonts
 
 - [Kenney Fonts] by Kennel.nl released under CC0
+
+## Mobile Version
+
+I want to add a little more to this (achievements, different SFX, leaderboards) and release a version on the Play Store. I'll hopefully post a link here if I ever do that.
