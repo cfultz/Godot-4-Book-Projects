@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://duca04ilhc7rj" path="res://scenes/powerups/cacti_remover.tscn" id="4_qeist"]
 [ext_resource type="PackedScene" uid="uid://k0oha3doe4hf" path="res://scenes/powerups/powerup.tscn" id="5_ggpk1"]
 [ext_resource type="PackedScene" uid="uid://buh08lnnvr3o0" path="res://scenes/UI/hud.tscn" id="5_llr2d"]
-[ext_resource type="Texture2D" uid="uid://c5jbq3fsmnk4t" path="res://assets/floor.png" id="6_ma3b2"]
+[ext_resource type="Texture2D" uid="uid://bpigmxh6pqh1g" path="res://assets/floor (2).png" id="6_f3mcd"]
 [ext_resource type="AudioStream" uid="uid://crps3qrriro5y" path="res://assets/audio/Coin.wav" id="6_xix7y"]
 [ext_resource type="AudioStream" uid="uid://dnuak388vxldy" path="res://assets/audio/Level.wav" id="7_kd5jn"]
 [ext_resource type="AudioStream" uid="uid://cr2tkixovmsnc" path="res://assets/audio/EndSound.wav" id="8_7rdrk"]
@@ -25,7 +25,7 @@ offset_right = 480.0
 offset_bottom = 720.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("6_ma3b2")
+texture = ExtResource("6_f3mcd")
 stretch_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("1_45rda")]
