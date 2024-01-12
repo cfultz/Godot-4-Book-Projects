@@ -14,3 +14,4 @@ Collect all the coins to advance to the next round in the allotted time but watc
 - Mop created in [Aesprite](https://github.com/aseprite/aseprite) by cfultz. Inspired by [alamy mop](https://www.alamy.com/vector-pixel-art-mop-isolated-cartoon-image362289110.html)
 - [Wood Floor](https://opengameart.org/content/wood-floor) by DavidRStudios released under CC0
 - [Railgun Rain](https://opengameart.org/content/railgun-rain) level music by northivanastan released under CC0
+- [Animated Coin](https://opengameart.org/content/rotating-coin) by Puddin released under CC0

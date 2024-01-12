@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dov58nlrlslto"]
+[gd_scene load_steps=14 format=3 uid="uid://dov58nlrlslto"]
 
 [ext_resource type="PackedScene" uid="uid://vo0v8pu046av" path="res://scenes/player/player.tscn" id="1_45rda"]
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_aglls"]
@@ -7,11 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://duca04ilhc7rj" path="res://scenes/powerups/cacti_remover.tscn" id="4_qeist"]
 [ext_resource type="PackedScene" uid="uid://k0oha3doe4hf" path="res://scenes/powerups/powerup.tscn" id="5_ggpk1"]
 [ext_resource type="PackedScene" uid="uid://buh08lnnvr3o0" path="res://scenes/UI/hud.tscn" id="5_llr2d"]
-[ext_resource type="Texture2D" uid="uid://bpigmxh6pqh1g" path="res://assets/floor (2).png" id="6_f3mcd"]
+[ext_resource type="Texture2D" uid="uid://bpigmxh6pqh1g" path="res://assets/floor.png" id="6_f3mcd"]
 [ext_resource type="AudioStream" uid="uid://crps3qrriro5y" path="res://assets/audio/Coin.wav" id="6_xix7y"]
 [ext_resource type="AudioStream" uid="uid://dnuak388vxldy" path="res://assets/audio/Level.wav" id="7_kd5jn"]
 [ext_resource type="AudioStream" uid="uid://cr2tkixovmsnc" path="res://assets/audio/EndSound.wav" id="8_7rdrk"]
 [ext_resource type="AudioStream" uid="uid://dbkbuv83spy53" path="res://assets/audio/Powerup.wav" id="10_v1vwn"]
+[ext_resource type="AudioStream" uid="uid://cgf3yq8udf0ub" path="res://assets/audio/railgun_rain.ogg" id="13_ua3go"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_aglls")
@@ -55,6 +56,10 @@ stream = ExtResource("8_7rdrk")
 [node name="PowerupSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_v1vwn")
 volume_db = 5.0
+
+[node name="BackgroundJams" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_ua3go")
+autoplay = true
 
 [connection signal="hurt" from="Player" to="." method="_on_player_hurt"]
 [connection signal="pickup" from="Player" to="." method="_on_player_pickup"]
