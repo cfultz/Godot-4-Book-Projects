@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcqdlb2ojmqki"
-path="res://.godot/imported/play_button.png-a13d378a12c6191f78ec9e38f1b8dc4e.ctex"
+uid="uid://bhigkfaplcpfd"
+path="res://.godot/imported/bar_glass_200.png-6756098ae8656b2eb7a0a4c0a38afc3a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/play_button.png"
-dest_files=["res://.godot/imported/play_button.png-a13d378a12c6191f78ec9e38f1b8dc4e.ctex"]
+source_file="res://assets/images/UI/bar_glass_200.png"
+dest_files=["res://.godot/imported/bar_glass_200.png-6756098ae8656b2eb7a0a4c0a38afc3a.ctex"]
 
 [params]
 

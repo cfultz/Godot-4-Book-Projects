@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu0hruwv7tc2o"
-path="res://.godot/imported/bar_yellow_200.png-a66e5e072479259e8df3d473be2c72e5.ctex"
+uid="uid://dqdsuti3fdr53"
+path="res://.godot/imported/laser_green.png-2aa547fdbd871cc786b06e0ead6638c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bar_yellow_200.png"
-dest_files=["res://.godot/imported/bar_yellow_200.png-a66e5e072479259e8df3d473be2c72e5.ctex"]
+source_file="res://assets/images/particles/laser_green.png"
+dest_files=["res://.godot/imported/laser_green.png-2aa547fdbd871cc786b06e0ead6638c0.ctex"]
 
 [params]
 

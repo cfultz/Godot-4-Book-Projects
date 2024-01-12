@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqdsuti3fdr53"
-path="res://.godot/imported/laser_green.png-4b16a03a914124df5ad8c24cc640964e.ctex"
+uid="uid://cddv3rm06jygc"
+path="res://.godot/imported/rock.png-fa4b6b191aa79fcc21fe4fb13b791395.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/laser_green.png"
-dest_files=["res://.godot/imported/laser_green.png-4b16a03a914124df5ad8c24cc640964e.ctex"]
+source_file="res://assets/images/enemy/rock.png"
+dest_files=["res://.godot/imported/rock.png-fa4b6b191aa79fcc21fe4fb13b791395.ctex"]
 
 [params]
 

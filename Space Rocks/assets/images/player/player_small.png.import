@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu0xy6m3wtm2x"
-path="res://.godot/imported/corona.png-0d864ff185c27162e530fe744dfcfb59.ctex"
+uid="uid://qfl2fa5lamhp"
+path="res://.godot/imported/player_small.png-b7fa29d642adecedade219ade2f7636d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/corona.png"
-dest_files=["res://.godot/imported/corona.png-0d864ff185c27162e530fe744dfcfb59.ctex"]
+source_file="res://assets/images/player/player_small.png"
+dest_files=["res://.godot/imported/player_small.png-b7fa29d642adecedade219ade2f7636d.ctex"]
 
 [params]
 
