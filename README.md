@@ -7,7 +7,7 @@ General repository to hold all the games from the book "Godot 4 Game Development
 ## Projects
 
 - Chapter 1 - Setup of the Engine
-- Chapter 2 - [Coin Dash](https://github.com/cfultz/Godot-4-Book-Projects/tree/main/Coin%20Dash)
+- Chapter 2 - [Coin Dash](https://github.com/cfultz/Godot-4-Book-Projects/tree/main/Coin%20Dash) - Modified sprites, added obstacle removal powerup, and added music
 - Chapter 3 - [Space Rocks](https://github.com/cfultz/Godot-4-Book-Projects/tree/main/Space%20Rocks)
 
 ## Assetes Used
