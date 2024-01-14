@@ -36,3 +36,4 @@ func explode():
 	angular_velocity = 0
 	await $Explosion/AnimationPlayer.animation_finished
 	queue_free()
+
