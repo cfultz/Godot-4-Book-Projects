@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="Space Rocks"
+config/version="v1"
 run/main_scene="res://scenes/main/main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://assets/images/enemy/rock.png"
 
 [display]
 
