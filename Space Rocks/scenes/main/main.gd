@@ -25,6 +25,8 @@ func spawn_rock(size, pos=null, vel=null):
 	r.exploded.connect(self._on_rock_exploded)
 	
 func _on_rock_exploded(size, radius, pos, vel):
+	score += 1
+	$Hud.update_score(score)
 	if size <= 1:
 		return
 	for offset in [-1, 1]:
@@ -45,6 +47,9 @@ func new_game():
 	playing = true
 
 func new_level():
+	if level > 0:
+		score += 15
+	$Hud.update_score(score)
 	level += 1
 	$Hud.show_message("Wave %s" % level)
 	for i in level:
