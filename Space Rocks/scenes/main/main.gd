@@ -9,6 +9,7 @@ var screensize = Vector2.ZERO
 
 func _ready():
 	screensize = get_viewport().get_visible_rect().size
+	$Player.hide()
 	for i in 3:
 		spawn_rock(3)
 		
@@ -40,6 +41,7 @@ func new_game():
 	get_tree().call_group("rocks", "queue_free")
 	level = 0
 	score = 0
+	$Player.show()
 	$Hud.update_score(score)
 	$Hud.show_message("Get Ready!")
 	$Player.reset
